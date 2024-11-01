@@ -4,6 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { SCENE } from "./utils/Config";
 import { DRT } from "./models/DRT";
 import { Suspense } from "react";
+import Text from "./UI/Text";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         </Suspense>
         <OrbitControls target={SCENE.targetPosition} />
       </Canvas>
+      <Text />
     </>
   );
 }

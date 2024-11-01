@@ -9,7 +9,13 @@ body,
   overflow: hidden;
   color: white;
 }
-
 body {
   background: rgb(15, 15, 15);
+}
+.panel {
+  position: absolute;
+}
+#text {
+  top: 25%;
+  right: 25%;
 }
