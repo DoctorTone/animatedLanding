@@ -2,6 +2,8 @@ import { Canvas } from "@react-three/fiber";
 import Cubes from "./components/Cubes";
 import { OrbitControls } from "@react-three/drei";
 import { SCENE } from "./utils/Config";
+import { DRT } from "./models/DRT";
+import { Suspense } from "react";
 
 function App() {
   return (
@@ -21,7 +23,10 @@ function App() {
           shadow-camera-far={100}
         />
         <Cubes />
-        <OrbitControls />
+        <Suspense fallback={null}>
+          <DRT />
+        </Suspense>
+        <OrbitControls target={SCENE.targetPosition} />
       </Canvas>
     </>
   );
