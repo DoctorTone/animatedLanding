@@ -6,6 +6,8 @@ import { DRT } from "./models/DRT";
 import { Suspense } from "react";
 import Text from "./UI/Text";
 
+const INTERACTIVE = false;
+
 function App() {
   return (
     <>
@@ -27,7 +29,12 @@ function App() {
         <Suspense fallback={null}>
           <DRT />
         </Suspense>
-        <OrbitControls target={SCENE.targetPosition} />
+        <OrbitControls
+          target={SCENE.targetPosition}
+          enablePan={INTERACTIVE}
+          enableRotate={INTERACTIVE}
+          enableZoom={INTERACTIVE}
+        />
       </Canvas>
       <Text />
     </>
