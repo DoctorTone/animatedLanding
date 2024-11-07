@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -14,7 +13,7 @@ const Text = () => {
           sx={{
             border: "2px solid white",
             borderRadius: "20px",
-            padding: "10px 20px",
+            padding: "10px 5px",
           }}
         >
           Shed some light on your next project

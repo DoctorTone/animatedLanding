@@ -5,13 +5,14 @@ import { SCENE } from "./utils/Config";
 import { DRT } from "./models/DRT";
 import { Suspense } from "react";
 import Text from "./UI/Text";
+import { getCameraPosition } from "./utils/Utils";
 
 const INTERACTIVE = false;
 
 function App() {
   return (
     <>
-      <Canvas camera={{ position: SCENE.cameraPosition }}>
+      <Canvas camera={{ position: getCameraPosition() }}>
         <spotLight
           position={SCENE.lightPosition}
           distance={100}
@@ -27,7 +28,7 @@ function App() {
         />
         <Cubes />
         <Suspense fallback={null}>
-          <DRT />
+          <DRT position={[11, 7, 0]} />
         </Suspense>
         <OrbitControls
           target={SCENE.targetPosition}

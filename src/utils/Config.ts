@@ -1,13 +1,13 @@
 import { Vector3 } from "three";
 
 const SCENE = {
-  cameraPosition: new Vector3(20, 15, 25),
+  cameraPosition: new Vector3(20, 15, 35),
   targetPosition: new Vector3(12.5, 0, 0),
   lightPosition: new Vector3(15, 50, 7),
   lightAngle: 0.5,
   lightIntensity: 100,
-  NUM_ROWS_X: 30,
-  NUM_ROWS_Z: 30,
+  NUM_ROWS_X: 35,
+  NUM_ROWS_Z: 35,
   ROW_INC_X: 2.5,
   ROW_INC_Z: 2.5,
   BOX_SIZE: 1,
@@ -22,4 +22,11 @@ const SCENE = {
   PLANE_SIZE_Y: 100,
 };
 
-export { SCENE };
+const BREAKPOINTS = {
+  SMALL: 600,
+  MEDIUM: 900,
+  LARGE: 1200,
+  EXTRA_LARGE: 1536,
+};
+
+export { SCENE, BREAKPOINTS };

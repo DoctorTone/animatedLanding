@@ -19,7 +19,7 @@ type GLTFResult = GLTF & {
 export function DRT(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF("./models/DRT.gltf") as GLTFResult;
   return (
-    <group {...props} dispose={null} scale={10} position-y={7}>
+    <group {...props} dispose={null} scale={10}>
       <mesh
         castShadow
         receiveShadow
