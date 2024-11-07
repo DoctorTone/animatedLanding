@@ -7,7 +7,7 @@ const Text = () => {
     <div id="text" className="panel">
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h3" sx={{ mb: 5 }}>
-          Your Company Here
+          Your Company
         </Typography>
         <Typography
           variant="h5"
@@ -17,7 +17,7 @@ const Text = () => {
             padding: "10px 20px",
           }}
         >
-          Lets work together
+          Shed some light on your next project
         </Typography>
       </Box>
     </div>
