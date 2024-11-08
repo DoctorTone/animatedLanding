@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Instance } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { Mesh } from "three";
 import { SCENE } from "../utils/Config";
 
 interface CubeProps {
@@ -8,8 +9,7 @@ interface CubeProps {
 }
 
 const Cube = ({ coord }: CubeProps) => {
-  const cubeRef = useRef();
-  let j = 0;
+  const cubeRef = useRef<Mesh>(null);
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
